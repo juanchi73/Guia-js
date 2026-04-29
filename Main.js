@@ -94,14 +94,6 @@ for(let i = 3; i > 0; i--) {
 console.log("¡Comienza!");
 
 //Ejercicio 8
-//Usar un bucle while para mostrar los números del 1 al 5
-let contador = 1;
-while (contador <= 5) {
-  console.log(contador);
-  contador++;
-}
-
-//Ejercicio 9
 //Puntos por ronda y acumular puntos
 let puntajeTotal = 0;
 for (let ronda = 1; ronda <= 5; ronda++) {
@@ -110,3 +102,16 @@ for (let ronda = 1; ronda <= 5; ronda++) {
 }
 
 console.log("Puntaje total después de 5 rondas:", puntajeTotal);    
+
+//Ejercicio 9
+
+const inventario = ["espada", "poción", "escudo", "llave", "armadura"];
+console.log("Primer objeto:", inventario[0]);
+console.log("Último objeto:", inventario[inventario.length - 1]);
+console.log("Cantidad total de objetos:", inventario.length);
+
+//Ejercicio 10
+// Mostramos los elementos recorriendo el array con un bucle for
+for (let i = 0; i < inventario.length; i++) {
+  console.log("Objeto en el inventario:", inventario[i]);
+}
