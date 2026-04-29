@@ -86,3 +86,27 @@ switch (opcion) {
     console.log("Opción no válida");
 }
 
+//Ejercicio 7
+//Cuenta regresiva.
+for(let i = 3; i > 0; i--) {
+  console.log(i);
+}
+console.log("¡Comienza!");
+
+//Ejercicio 8
+//Usar un bucle while para mostrar los números del 1 al 5
+let contador = 1;
+while (contador <= 5) {
+  console.log(contador);
+  contador++;
+}
+
+//Ejercicio 9
+//Puntos por ronda y acumular puntos
+let puntajeTotal = 0;
+for (let ronda = 1; ronda <= 5; ronda++) {
+  let puntosRonda = ronda * 10; // Cada ronda suma una cantidad diferente
+  puntajeTotal += puntosRonda; // Acumulamos los puntos
+}
+
+console.log("Puntaje total después de 5 rondas:", puntajeTotal);    
