@@ -1,4 +1,4 @@
-console.log("GuÃ­a JavaScript iniciada");
+console.log("Guía JavaScript iniciada");
 //Ejercicio 1
 const nombre = "Juan";
 let edad = 23;
@@ -10,10 +10,10 @@ console.log("Nombre:", nombre);
 console.log("Edad:", edad);
 console.log("Vida:", Vida);
 console.log("Puntaje:", puntaje);
-console.log("Â¿EstÃ¡ activo?", esta_activo);
+console.log("¿Está activo?", esta_activo);
 
 //Ejercicio 2
-//los puntos totales se calculan sumando los puntos base, el bonus y restando la penalizaciÃ³n
+//los puntos totales se calculan sumando los puntos base, el bonus y restando la penalización
 let puntosBase = 100;
 let bonus = 50;
 let penalizacion = 20;
@@ -26,23 +26,23 @@ const boton = document.getElementById("btn");
 const mensaje = document.getElementById("mensaje");
 
 boton.addEventListener("click", function () {
- const valor = input.value;
+  const valor = input.value;
 
- // Convertir valor a nÃºmero
- // Sumar 10
- // Mostrar el resultado en pantalla
-    const numero = parseFloat(valor);
-    const resultado = numero + 10;
-    mensaje.textContent = "El resultado es: " + resultado;
+  // Convertir valor a número
+  // Sumar 10
+  // Mostrar el resultado en pantalla
+  const numero = parseFloat(valor);
+  const resultado = numero + 10;
+  mensaje.textContent = "El resultado es: " + resultado;
 });
 
 //Ejercicio 4
 //Preguntamos la edad del jugador, si el jugador es mayor de 13 se lo deja jugar, si es menor no
-const edadJugador = prompt("Â¿CuÃ¡l es tu edad?");
+const edadJugador = prompt("¿Cuál es tu edad?");
 if (edadJugador >= 13) {
- alert("Â¡Bienvenido al juego!");
+  alert("¡Bienvenido al juego!");
 } else {
- alert("Lo siento, debes tener al menos 13 aÃ±os para jugar.");
+  alert("Lo siento, debes tener al menos 13 años para jugar.");
 }
 
 //Ejercicio 5
@@ -55,13 +55,13 @@ let vidaJugador = 85; // Puedes cambiar este valor para probar diferentes casos
 let estadoJugador = "";
 
 if (vidaJugador > 70) {
- estadoJugador = "Jugador en buen estado";
+  estadoJugador = "Jugador en buen estado";
 } else if (vidaJugador >= 30) {
- estadoJugador = "Jugador herido";
+  estadoJugador = "Jugador herido";
 } else if (vidaJugador >= 1) {
- estadoJugador = "Jugador en peligro";
+  estadoJugador = "Jugador en peligro";
 } else if (vidaJugador >= 0) {
- estadoJugador = "Game Over";
+  estadoJugador = "Game Over";
 }
 
 console.log(estadoJugador);
@@ -71,16 +71,18 @@ mensaje.textContent = estadoJugador;
 let opcion = "iniciar";
 
 switch (opcion) {
-    case "iniciar":
-        console.log("Iniciando juego...");
-        break;
-    case "pausar":
-        console.log("Pausando juego...");
-        break;
-    case "reanudar":
-        console.log("Reanudando juego...");
-        break;
-    default:
-        console.log("Opción no válida");
+  case "iniciar":
+    console.log("Iniciando juego...");
+    break;
+  case "Configuracion":
+    console.log("Abriendo configuración...");
+    break;
+  case "creditos":
+    console.log("Mostrando créditos...");
+    break;
+    case "salir":
+    console.log("Saliendo del juego...");
+  default:
+    console.log("Opción no válida");
 }
 
