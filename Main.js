@@ -60,8 +60,10 @@ if (vidaJugador > 70) {
   estadoJugador = "Jugador herido";
 } else if (vidaJugador >= 1) {
   estadoJugador = "Jugador en peligro";
-} else if (vidaJugador >= 0) {
+} else if (vidaJugador === 0) {
   estadoJugador = "Game Over";
+} else if (vidaJugador < 0) {
+  estadoJugador = "Valor de vida no válido";
 }
 
 console.log(estadoJugador);
@@ -115,3 +117,106 @@ console.log("Cantidad total de objetos:", inventario.length);
 for (let i = 0; i < inventario.length; i++) {
   console.log("Objeto en el inventario:", inventario[i]);
 }
+
+//Ejercicio 11
+//Agregar y quitar elementos de la mochila
+let mochila = [];
+
+mochila.push("linterna");
+mochila.push("comida");
+mochila.push("mapa");
+mochila.pop();
+
+console.log("Mochila final:", mochila);
+
+//Ejercicio 12
+//Verifico si el jugador tiene una llave en el inventario
+const inventarioJugador = ["espada", "pocion", "llave", "escudo"];
+
+if (inventarioJugador.includes("llave")) {
+  console.log("La puerta se abre");
+} else {
+  console.log("Necesitás una llave");
+}
+
+//Ejercicio 13
+//Creo una funcion para saludar a un usuario
+function saludarUsuario(nombre) {
+  console.log("Bienvenido/a, " + nombre);
+}
+
+saludarUsuario("Milo");
+
+//Ejercicio 14
+//Calculo la vida restante luego de recibir daño
+function calcularVidaRestante(vida, danio) {
+  return vida - danio;
+}
+
+let resultado = calcularVidaRestante(100, 30);
+console.log(resultado);
+
+//Ejercicio 15
+//Creo una arrow function para sumar dos numeros
+const sumar = (a, b) => {
+  return a + b;
+};
+
+console.log(sumar(10, 5));
+
+//Ejercicio 16
+//Creo un objeto jugador con varias propiedades
+const jugador = {
+  nombre: "Luna",
+  vida: 100,
+  energia: 80,
+  nivel: 1,
+  inventario: ["espada", "poción"]
+};
+
+console.log("Nombre del jugador:", jugador.nombre);
+console.log("Vida del jugador:", jugador.vida);
+console.log("Energia del jugador:", jugador.energia);
+console.log("Nivel del jugador:", jugador.nivel);
+console.log("Inventario del jugador:", jugador.inventario);
+
+//Ejercicio 17
+//Modifico las propiedades del jugador
+const jugadorDos = {
+  nombre: "Kai",
+  nivel: 1,
+  monedas: 0
+};
+
+jugadorDos.nivel += 1;
+jugadorDos.monedas += 50;
+
+console.log("Jugador actualizado:", jugadorDos);
+
+//Ejercicio 18
+//Creo un array de personajes y muestro sus datos
+const personajes = [
+  { nombre: "Luna", vida: 100, tipo: "maga", nivel: 3 },
+  { nombre: "Kai", vida: 120, tipo: "guerrero", nivel: 4 },
+  { nombre: "Nina", vida: 90, tipo: "arquera", nivel: 2 }
+];
+
+for (let i = 0; i < personajes.length; i++) {
+  console.log(personajes[i].nombre + " es " + personajes[i].tipo + " y está en nivel " + personajes[i].nivel);
+}
+
+//Ejercicio 19
+//Filtro los personajes con nivel mayor o igual a 3
+const personajesFuertes = personajes.filter((personaje) => {
+  return personaje.nivel >= 3;
+});
+
+console.log(personajesFuertes);
+
+//Ejercicio 20
+//Obtengo un nuevo array que contenga solo los nombres
+const nombres = personajes.map((personaje) => {
+  return personaje.nombre;
+});
+
+console.log(nombres);
