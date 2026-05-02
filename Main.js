@@ -241,3 +241,12 @@ console.log(vidaTotal);
 //Muestro un mensaje en pantalla y cambiamos tambien el color del texto
 mensaje.textContent = "Bienvenido a la guía de JavaScript";
 mensaje.style.color = "blue";
+
+//Ejercicio 24
+//Cada vez que hacemos click en el boton sumamos puntos y los mostramos en pantalla
+let puntos = 0;
+
+boton.addEventListener("click", function () {
+  puntos += 10;
+  mensaje.textContent = "Puntaje: " + puntos;
+});
