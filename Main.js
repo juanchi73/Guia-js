@@ -236,3 +236,8 @@ const vidaTotal = personajes.reduce((acumulador, personaje) => {
 }, 0);
 
 console.log(vidaTotal);
+
+//Ejercicio 23
+//Muestro un mensaje en pantalla y cambiamos tambien el color del texto
+mensaje.textContent = "Bienvenido a la guía de JavaScript";
+mensaje.style.color = "blue";
