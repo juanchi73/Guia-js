@@ -228,3 +228,11 @@ const personajeEncontrado = personajes.find((personaje) => {
 });
 
 console.log(personajeEncontrado);
+
+//Ejercicio 22
+//Calculo la vida total de todos los personajes
+const vidaTotal = personajes.reduce((acumulador, personaje) => {
+  return acumulador + personaje.vida;
+}, 0);
+
+console.log(vidaTotal);
