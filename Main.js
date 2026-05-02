@@ -250,3 +250,13 @@ boton.addEventListener("click", function () {
   puntos += 10;
   mensaje.textContent = "Puntaje: " + puntos;
 });
+
+//Ejercicio 25
+//Validamos si el usuario ingreso un nombre antes de continuar
+boton.addEventListener("click", function () {
+  if (input.value === "") {
+    mensaje.textContent = "Ingresá un nombre para continuar";
+  } else {
+    mensaje.textContent = "Bienvenido/a, " + input.value;
+  }
+});
