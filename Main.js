@@ -220,3 +220,11 @@ const nombres = personajes.map((personaje) => {
 });
 
 console.log(nombres);
+
+//Ejercicio 21
+//Busco el personaje llamado Kai dentro del array personajes
+const personajeEncontrado = personajes.find((personaje) => {
+  return personaje.nombre === "Kai";
+});
+
+console.log(personajeEncontrado);
