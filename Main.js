@@ -260,3 +260,16 @@ boton.addEventListener("click", function () {
     mensaje.textContent = "Bienvenido/a, " + input.value;
   }
 });
+
+//Ejercicio 26
+//Guardamos un objeto en localStorage y luego lo recuperamos
+const jugadorGuardado = {
+  nombre: "Luna",
+  puntaje: 1500
+};
+
+localStorage.setItem("jugador", JSON.stringify(jugadorGuardado));
+
+const jugadorRecuperado = JSON.parse(localStorage.getItem("jugador"));
+
+console.log(jugadorRecuperado);
