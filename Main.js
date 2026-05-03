@@ -195,19 +195,19 @@ console.log("Jugador actualizado:", jugadorDos);
 
 //Ejercicio 18
 //Creo un array de personajes y muestro sus datos
-const personajes = [
+const personajesJuego = [
   { nombre: "Luna", vida: 100, tipo: "maga", nivel: 3 },
   { nombre: "Kai", vida: 120, tipo: "guerrero", nivel: 4 },
   { nombre: "Nina", vida: 90, tipo: "arquera", nivel: 2 }
 ];
 
-for (let i = 0; i < personajes.length; i++) {
-  console.log(personajes[i].nombre + " es " + personajes[i].tipo + " y está en nivel " + personajes[i].nivel);
+for (let i = 0; i < personajesJuego.length; i++) {
+  console.log(personajesJuego[i].nombre + " es " + personajesJuego[i].tipo + " y está en nivel " + personajesJuego[i].nivel);
 }
 
 //Ejercicio 19
 //Filtro los personajes con nivel mayor o igual a 3
-const personajesFuertes = personajes.filter((personaje) => {
+const personajesFuertes = personajesJuego.filter((personaje) => {
   return personaje.nivel >= 3;
 });
 
@@ -215,7 +215,7 @@ console.log(personajesFuertes);
 
 //Ejercicio 20
 //Obtengo un nuevo array que contenga solo los nombres
-const nombres = personajes.map((personaje) => {
+const nombres = personajesJuego.map((personaje) => {
   return personaje.nombre;
 });
 
@@ -223,7 +223,7 @@ console.log(nombres);
 
 //Ejercicio 21
 //Busco el personaje llamado Kai dentro del array personajes
-const personajeEncontrado = personajes.find((personaje) => {
+const personajeEncontrado = personajesJuego.find((personaje) => {
   return personaje.nombre === "Kai";
 });
 
@@ -231,7 +231,7 @@ console.log(personajeEncontrado);
 
 //Ejercicio 22
 //Calculo la vida total de todos los personajes
-const vidaTotal = personajes.reduce((acumulador, personaje) => {
+const vidaTotal = personajesJuego.reduce((acumulador, personaje) => {
   return acumulador + personaje.vida;
 }, 0);
 
@@ -273,3 +273,49 @@ localStorage.setItem("jugador", JSON.stringify(jugadorGuardado));
 const jugadorRecuperado = JSON.parse(localStorage.getItem("jugador"));
 
 console.log(jugadorRecuperado);
+
+//Ejercicio 27
+//Comparo let, const y var con ejemplos simples
+let nivelActual = 1;
+nivelActual = 2;
+
+const nombreJuego = "Aventura Pixel";
+
+var puntajeMaximo = 9999;
+
+console.log("let permite reasignar valores:", nivelActual);
+console.log("const mantiene un valor fijo:", nombreJuego);
+console.log("var existe por compatibilidad, pero hoy se evita:", puntajeMaximo);
+
+//Ejercicio 28
+//Analizo el scope mostrando una variable global y otra local
+let nombreScope = "Global";
+
+function mostrarNombre() {
+  let nombreScope = "Local";
+  console.log("Primero se muestra:", nombreScope);
+}
+
+mostrarNombre();
+console.log("Despues se muestra:", nombreScope);
+
+//Ejercicio 29
+//Muestro la diferencia entre un array y un objeto con un ejemplo de videojuego
+const inventarioJuego = ["espada", "pocion", "llave"];
+
+const jugadorJuego = {
+  nombre: "Luna",
+  vida: 100,
+  nivel: 3
+};
+
+console.log("El array inventario representa una lista ordenada de objetos:", inventarioJuego);
+console.log("El objeto jugador representa datos agrupados con propiedades:", jugadorJuego);
+
+//Ejercicio 30
+//Creo un boton de ejemplo para mostrar como funciona un evento click
+const botonEvento = document.getElementById("btn");
+
+botonEvento.addEventListener("click", function () {
+  console.log("El usuario hizo clic");
+});
